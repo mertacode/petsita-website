@@ -140,6 +140,18 @@
     .flinks a:hover { color:var(--orange-dark); }
     .fcopy { font-size:13px; color:var(--text-muted); }
 
+    /* İLETİŞİM FORMU */
+    .contact { padding: 80px 40px; background: var(--surface); }
+    .contact-inner { max-width: 600px; margin: 0 auto; }
+    .contact-form { display: flex; flex-direction: column; gap: 20px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group label { font-size: 15px; font-weight: 700; color: var(--text); }
+    .form-group input, .form-group textarea { padding: 14px 16px; border-radius: 14px; border: 1.5px solid var(--border); background: white; font-size: 15px; color: var(--text); font-family: 'Nunito Sans', sans-serif; outline: none; transition: border-color .2s; }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--orange); }
+    .form-group textarea { resize: vertical; }
+    .form-btn { background: var(--orange); color: white; border: none; padding: 16px; border-radius: 14px; font-size: 16px; font-weight: 800; cursor: pointer; font-family: 'Nunito', sans-serif; transition: background .2s, transform .15s; }
+    .form-btn:hover { background: var(--orange-dark); transform: translateY(-2px); }
+
     @media (max-width: 768px) {
       nav { padding: 14px 20px; }
       .nav-links { display:none; }
@@ -326,6 +338,30 @@
   </div>
 </div>
 
+<!-- İLETİŞİM -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="section-label" style="text-align:center">İletişim</div>
+    <h2 class="section-title" style="text-align:center">Bize Ulaşın</h2>
+    <p class="section-sub" style="text-align:center;max-width:500px;margin:0 auto 40px">Sorularınız, önerileriniz veya geri bildirimleriniz için bize yazın.</p>
+    <form class="contact-form" action="https://formspree.io/f/bilgi@mypetapp.co" method="POST">
+      <div class="form-group">
+        <label>Adınız</label>
+        <input type="text" name="name" placeholder="Adınız" required />
+      </div>
+      <div class="form-group">
+        <label>E-posta</label>
+        <input type="email" name="email" placeholder="ornek@email.com" required />
+      </div>
+      <div class="form-group">
+        <label>Mesajınız</label>
+        <textarea name="message" rows="5" placeholder="Mesajınızı yazın..." required></textarea>
+      </div>
+      <button type="submit" class="form-btn">Gönder</button>
+    </form>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="fl">
@@ -336,6 +372,7 @@
     <a href="#features">Özellikler</a>
     <a href="#how">Nasıl Çalışır</a>
     <a href="#coming-soon">Yakında</a>
+    <a href="#contact">İletişim</a>
     <a href="privacy.html">Gizlilik Politikası</a>
     <a href="terms.html">Kullanım Koşulları</a>
     <a href="mailto:bilgi@mypetapp.co">İletişim</a>
